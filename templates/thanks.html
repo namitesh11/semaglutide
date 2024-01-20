@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+  .email-tem {
+                  margin-top: 180px !important ;
+                  width: 700px !important;
+                  height: 100% !important;
+              }
+
+            @media (max-width: 576px) {    
+              .thank{
+                 padding: 50px 30px!important;
+              }     
+              .email-tem {
+                  width: 100% !important;
+              }
+
+            .thank h3{
+              font-size: 34px !important;
+            }
+
+            .thank span{
+              font-size: 15px !important;
+            }
+
+            .thank h6{
+              font-size: 12px !important;
+            }
+
+            .e-footer span{
+              font-size: 10px !important;
+              color: #FFFFFF !important;
+            }
+          }
+             
+</style>
+<section class="email-tem">
+    <div class="container">
+  
+        <div class="" style="display:flex; justify-content:center; align-items:center; background-color: #dc143c; border-radius: 10px 10px 0 0; padding:10px 0 !important;">
+            <!-- <div class="logo" ><img src="{% static 'img/ozempic_logo.png' %}" alt="ozempic_logo" width="180px"> </div> -->
+        </div>
+        
+        <div class="thank d-flex flex-column justify-content-center align-items-center" style="background-color: #f7f7f7; text-align: center; padding:60px;"> 
+            <p class="user" style="font-size: 16px; font-weight: 500; margin-bottom: 5px !important;">Hello <b>{{name}}</b>, </p>    
+            <h3 style="color:#dc143c; font-size:42px; font-weight:800; ">THANK YOU !</h3>
+            <span style="font-size: 18px; font-weight:500; margin-top:10px !important;">FOR YOUR ORDER</span>
+            <h6 style="font-size: 15px; font-weight: 600;  margin:15px 0 20px 0 !important;">Thank you for contacting us. We have received your message and will get back to you as soon as possible.</h6>    
+            <a href="{% url 'home' %}" class="mt-4" style=" font-size:14px; padding:10px 30px; color:#fff; background-color:#dc143c; border-radius:10px; border:none"> VIEW SITE</a>
+        </div>
+  
+        <div class="e-footer" style="display:flex; justify-content:center; align-items: center; background-color: #dc143c; border-radius: 0 0 10px 10px !important; color: #fff !important; padding:20px; ">
+          <span style="font-size:14px; color:#fff !important; text-align:center;"><b>For any order related queries, please 
+            Contact</b><br> Call :- +98 12345 69870 /  Mail :- contactus@gmail.com </span>
+        </div>
+    </div>
+  </section>
+
+{% endblock %}

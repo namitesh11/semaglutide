@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="email-tem">
+    <div class="container faq">
+      <h2 class="heading-1 mt-5">Questions About Ozempic’s Dosage</h2>
+      <div class="row mt-5">
+  
+          <div class="col-lg-12 col-md-12 col-12">
+            <div class="acc">
+              <div class="accordion accordion-flush acc" id="accordionFlushExample">
+  
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed  txt-que" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      What if I miss a dose of Ozempic?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      If you miss a dose of Ozempic, take the drug as soon as you remember. But only do this if it’s within 5 days of your last dose. 
+                      If it’s been more than 5 days, skip the missed dose and wait until it’s time for your next scheduled dose. 
+                      Taking two doses too close together could lead to dangerously low blood sugar levels. If you miss a dose, check your blood sugar levels regularly to make sure they’re within the standard range.
+                       You might find a reminder app like Medisafe useful for staying on track with your weekly injections.
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed  txt-que" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Will I need to use Ozempic long term?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      If Ozempic works well for your condition, your doctor may have you take the medication long term. 
+                      Ask your doctor about the benefits and risks of using Ozempic long term, including its side effects.
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed txt-que" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      How long does Ozempic take to work?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      Ozempic starts to work shortly after it’s been injected. After you start using Ozempic, your body may take several weeks to get used to it and to get the full benefit. 
+                      Depending on how you’re doing with Ozempic, your doctor may then adjust your dose. 
+                      Follow your doctor’s advice on the dose of Ozempic you should take, and take it exactly as directed.
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading4">
+                    <button class="accordion-button collapsed txt-que" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                      How long does Ozempic take to work?
+                    </button>
+                  </h2>
+                  <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      Ozempic starts to work shortly after it’s been injected. After you start using Ozempic, your body may take several weeks to get used to it and to get the full benefit. 
+                      Depending on how you’re doing with Ozempic, your doctor may then adjust your dose. 
+                      Follow your doctor’s advice on the dose of Ozempic you should take, and take it exactly as directed.
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading5">
+                    <button class="accordion-button collapsed txt-que" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                      How long does Ozempic take to work?
+                    </button>
+                  </h2>
+                  <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      Ozempic starts to work shortly after it’s been injected. After you start using Ozempic, your body may take several weeks to get used to it and to get the full benefit. 
+                      Depending on how you’re doing with Ozempic, your doctor may then adjust your dose. 
+                      Follow your doctor’s advice on the dose of Ozempic you should take, and take it exactly as directed.
+                    </div>
+                  </div>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+  
+          <!-- <div class="col-lg-6 col-md-6 col-12">
+            <div class="ads"> </div>
+            <img src="{% static 'img/semaglutide-injection.jpg' %}" alt="" width="100%" height="100%">
+          </div> -->
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bg-new">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-md-6 lg-6 col-12">
+          <div class="main-img1">
+            <img  class="" src="{% static 'img/semaglutide.png' %}" alt="">
+          </div>
+        </div>
+  
+        <div class="col-md-6 lg-6 col-12">
+         <div class="b1">
+          <div class="popup popup-1">
+            <div class="popup-content">
+              <div class="event-header">
+                <h3>Book Your Doses</h3>
+                <h6 class="txt-red">Don't be shy, say hi!</h6>
+              </div>   
+                <form id="send" method="POST"  action="">  {% csrf_token %}           
+                  
+                  <div class="form-group">
+                    <input type="text" placeholder="Enter name..." id="name" name="name" required="required">
+                    <label for="name">
+                      <i class="fa fa-user"></i>
+                    </label>
+                  </div>
+      
+                  <div class="form-group">
+                    <input type="tel" placeholder="Enter phone..." id="phone" name="phone" required="required">
+                    <label for="phone">
+                      <i class="fa fa-phone"></i>
+                    </label>
+                  </div>
+      
+                  <div class="form-group">
+                    <input type="email" placeholder="Enter mail..." id="mail" name="email" required="required">
+                    <label for="mail">
+                      <i class="fa fa-envelope"></i>
+                    </label>
+                  </div>
+      
+                  <div class="form-group">
+                    <textarea placeholder="Enter message..." name="message" id="text"></textarea>
+                    <label for="text" class="txt">
+                      <i class="fa fa-commenting"></i>
+                    </label>
+                  </div>
+      
+                  <button type="submit" class="main-btn-rect" name="text" value="Send"><i class="fa fa-paper-plane"></i>Book</button>
+
+                </form>
+            </div>
+          </div>
+         </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+
+
+{% endblock %}

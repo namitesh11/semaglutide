@@ -1,0 +1,604 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="banner">
+  <div class=" container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="main-img">
+          <img src="{% static 'img/ozempic-3pens-vertical.png' %}" alt="" >
+        </div>
+      </div>
+      
+      <div class="col-lg-1 col-md-1">
+        <div class="divider"></div>
+      </div>
+
+      <div class="col-lg-7 col-md-7 col-12">
+        <div class="main-contain">
+          <b><small class="hd-small">XXX XXXX XXXXXX XXX</small></b>
+          <h1 class="main-heading">Starting patients on<br>once-weekly Ozempic®<br>(semaglutide) injection</h1>
+          <h5 class="heading-4">See how to adjust your patients’ doses and add Ozempic®<br>to your EHR system.</h5>
+        
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Doses</button>
+          
+          <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SEMAGLUTIDE INJECTION</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="popup">
+
+                      <div class="popup-content">
+                        <div class="event-header">
+                          {% include 'includes/alerts.html' %}
+                          <h3>Book Your Doses</h3>
+                          <h6>Don't be shy, say hi!</h6>
+                        </div>
+                          <form id="send" class="send-form" action="" method="post"> {% csrf_token %}
+                
+                            <div class="form-group">
+                              <input type="text" placeholder="Enter name..."  name="name" required="required">
+                              <label for="name">
+                                <i class="fa fa-user"></i>
+                              </label>
+                            </div>
+                
+                            <div class="form-group">
+                              <input type="tel" placeholder="Enter phone..."  name="phone" required="required">
+                              <label for="phone">
+                                <i class="fa fa-phone"></i>
+                              </label>
+                            </div>
+                
+                            <div class="form-group">
+                              <input type="email" placeholder="Enter mail..."  name="email" required="required">
+                              <label for="mail">
+                                <i class="fa fa-envelope"></i>
+                              </label>
+                            </div>
+                
+                            <div class="form-group">
+                              <textarea placeholder="Enter message..." name="message" ></textarea>
+                              <label for="text" class="txt">
+                                <i class="fa fa-commenting"></i>
+                              </label>
+                            </div>
+                
+                            <button type="submit"  class="main-btn-rect" name="text" value="Send">
+                              <i class="fa fa-paper-plane"></i>Send</button>
+                
+                          </form>
+                
+                       
+                
+                      </div>
+                
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                  </div>
+                </div>
+              </div>
+            </div> 
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+      <div class="ozempic">
+        <h2 class="heading-1">What is Ozempic®?</h2>
+        <div class="ozempic-content">
+            <div class="row mt-4">
+              <div class="col-md-12 col-lg-6 col-12">
+                <div class="p-3 img-12"><img src="{% static 'img/20170228-niddk-chart.jpg' %}" alt="image-here"></div>
+              </div>
+
+              <div class="col-md-12 col-lg-6 col-12">
+                <p class="txt-align-justify pb-2" >Ozempic or Semaglutide belongs to a class of GLP-1 receptor agonists, i.e., a class of
+                  medications used to treat type-2 diabetes and obesity. Type-2 diabetes, or the condition of
+                  high levels of glucose in the blood with insufficient response of the body to insulin, is a
+                  chronic condition that, if not corrected on time, can impact your systemic health with day-to-
+                  day living. Studies have shown type-2 Diabetics to be more severely impacted than type-1
+                  Diabetics and have greater problems in managing diet, weight, and getting exercise.
+                </p>
+
+                <p class="txt-align-justify pb-2">According to the American Diabetes Association, Metformin is preferred as the first line of treatment for Type-2 Diabetes as monotherapy. Ozempic or Semaglutide is advised by your healthcare provider when you are allergic or intolerant to Metformin or as an adjunctive to
+                  diet and exercise to improve glycaemic control successfully. It is further indicated in patients with atherosclerosis, heart disease, and chronic kidney
+                  issues diagnosed with Type-2 Diabetes dealing with persistently higher blood sugar levels
+                  even with Metformin.Ozempic is regarded as a GLP-1 RA (Glucagon-like peptide) receptor agonist that prompts
+                  the body to produce more insulin to reduce sugar levels successfully.
+                </p> 
+              </div>
+            </div>
+
+            <div class="row mt-5"> 
+                <p class="txt-align-justify pb-2">
+                In findings discussed at the annual meeting of the European Association of Study of
+                Diabetes, Ozempic was declared as having a superior profile than other antidiabetics like
+                Invokana from Johnson &amp; Johnson and GLP-1 drug Victoza from parent-company Nova and
+                caused a better reduction in blood sugar levels than the other drugs in just one dose.
+                It was further concluded that Ozempic was safe to use and did not cause pancreatitis or
+                increase the risk of pancreatic cancer.</p>
+                    
+            </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section-2">
+  <div class="container">
+    <h2 class="heading-1">Is Ozempic used for weight loss?</h2>
+
+    <div class="">
+      
+        <p class="txt-align-justify pb-2">Besides being an effective option for Type-2 Diabetes, Semaglutide, the active ingredient of
+          Ozempic, is also regarded as an effective option for weight loss.
+          Researchers have previously postulated that BMI (Body Mass Index) is related to diabetes
+          and insulin resistance in the system. People with a higher BMI have increased
+          proinflammatory markers, nonesterified fatty acids, and other substances. In turn, this
+          impairs the ability of β-Langerhans islet cells in the pancreas and sets off the process from
+          prediabetes to diabetes.</p>
+
+        <p class=" txt-align-justify pb-2">Ozempic, though not the first line of treatment for weight loss, is used as an off-label
+          medication in obesity conditions in adjunction with diet and exercise. The EASD annual
+          meeting has reported Ozempic to spur better quality weight loss than others.
+          As per the EASD reports, subjects reported losing a 5.3 kg-5.8 kg weight with Ozempic in
+          comparison to a 4.2 kg and 1.9 kg weight loss reported by other drugs.
+          Endocrinologists at Harvard-affiliated Brigham and Women&#39;s Hospital have pointed out that
+          Ozempic has the potential to cause substantial weight loss in people dealing with obesity
+          with or without Type 2 Diabetes. But it needs to be combined with a healthy lifestyle to obtain
+          best results.
+          The Obesity Medicine Association has mentioned that in clinical trials, Semaglutide, the chief
+          ingredient of Ozempic, resulted in a 20% body weight loss in 1/3rd of the participants. Sugar
+          control and risk for heart disease were further improved in the patients who lost about 10%
+          of body weight with Semaglutide injections.</p>
+
+        <p class="txt-align-justify pb-2" >The American Medical Association has further explained that Ozempic and Wegovy are very
+          similar in ingredients, though they have different strengths. Lower doses are used in weight
+          loss, while higher doses are relegated to diabetes management.</p>
+
+    </div>
+
+  <div class="mt-4">
+      <h3 class="heading-2 text-center mb-2">How Ozempic works for weight loss</h3>
+      <div class="row">
+          <div class="col-md-12 col-lg-6 col-12">
+              <p class="txt-align-justify pb-2">In-lab evaluation has previously shown that Ozempic is a GLP-1 Analogue having a 94%
+                sequence homology to human GLP-1. GLP-1 is a 30-amino acid peptide hormone in the
+                epithelial cells of the intestine that acts as an incretin hormone to stimulate insulin release in
+                the body cells. In healthy humans, the incretin GLP-1 is secreted after eating and performs
+                the functions of augmenting insulin secretion, impairing gastric emptying, and suppressing
+                appetite.
+              </p>
+              <p class="txt-align-justify pb-2" >Ozempic is designed to mimic the human GLP-1 in such a manner as to stimulate insulin
+                secretion and slow down the release of glucagon, the hormone involved in controlling blood
+                sugar levels. During this process, it activates the adenylate cyclase and cAMP molecules
+                that facilitate the process of fat-burning or lipolysis.
+              </p>
+              <p class="txt-align-justify pb-2" >Research has shown that GLP-1 agonists like Ozempic work on ghrelin and leptin, the
+              mediators of energy balance that play an important role in meal initiation and in suppressing
+              food intake for weight loss, resulting in people experiencing a significant reduction in
+              cravings after using the medication.</p> 
+          </div>
+          <div class="col-md-12 col-lg-6 col-12">
+             <div class="img-12"><img src="{% static 'img/01.webp' %}" alt="" width="100%" height="400" ></div>
+          </div>
+      </div>
+
+      <div >
+        <p class="txt-align-justify pb-2">
+         
+          This makes it easier to reduce food cravings and manage food choices. Studies have shown
+          that leptin is important for inhibiting hunger and managing energy expenditure. Leptin is also
+          an adipokine that reflects the adiposity or amount of adipose fat in our body. Overweight
+          people having a high amount of adipose fat also have high amounts of leptin in their body,
+          making them leptin-resistant and thus facing excessive hunger pangs accompanied by
+          Ozempic works on the pathophysiology of leptin resistance to regulate glucose homeostasis
+          and exerts its effects on the vagus nerve to mimic a satiating effect. Further, it slows down
+          stomach emptying, which makes patients feel fuller faster and reduces their food-volume
+          intake.<BR><br>
+          Recent research has even shown that Ozempic has the capacity to transform metabolically
+          insufficient white fat and convert it into mitochondria-rich brown fat in order to deal with
+          obesity and metabolic disorders.
+        </p>
+      </div> 
+
+      <div class="mt-4">
+          <h3 class="heading-2 text-center mb-2">Is Ozempic safe and effective for weight loss? How much
+            weight could I lose with Ozempic?</h3>
+
+            <p class="txt-align-justify pb-2">
+              Studies have shown that Ozempic is safe and effective option for weight loss when used
+              under medical guidance or as per the healthcare practitioner&#39;s advice.
+              In a meta-analysis of numerous studies conducted on Ozempic, the use of the medication
+              was recorded to cause a significant weight loss of 10.09% of the participants. The subject
+              further reported a 3.71kg/m2 reduction in BMI and a decrease of 8.28 cm in the waist
+              circumference.
+              On the whole, the use of Ozempic/Semaglutide had a positive effect on the blood pressure
+              and lipid profiles of the patients. The most common adverse reactions recorded were
+              gastrointestinal reactions. The results were stable and reliable with dose dependence. The
+              study proved that Ozempic could prove to be a safe weight loss option for obese patients.
+            </p>
+
+            <p class="txt-align-justify pb-2">
+              While some researchers have voiced their concern about hair fall in Ozempic users, clinical
+              trials have not reported any hair fall recordings in Ozempic users.
+              SUSTAIN ( Semaglutide Unabated Sustainability in Treatment of Type 2 Diabetes)1 Trials
+              conducted on Semaglutide, the active ingredient of Ozempic, in 388 participants showed it to
+              improve glucose levels and body weight in patients with Type-2 Diabetes. Patients with
+              91.93kg body weight recorded a 3.73 kg weight decrease with 0.5mg Semaglutide at the end
+              of thirty weeks. Those administered 1.0 mg Semaglutude recorded a 4.53 kg weight loss by
+              the end of the study.Nausea and diarrhea were the most common side effects recorded during the trial weeks.
+            </p>
+      </div>      
+  </div>
+</div>
+</section>
+
+
+<section class="section-3" id="section-3">
+  <div class="container">
+    <h2 class="heading-1 ">How does Ozempic work?</h2>
+    <div class="mt-3">
+      <p class="pb-2"><b>The working of Ozempic can be summed up through :</b></p>
+      <ul class="b pb-2">
+        <li>Works on the liver enzymes to reduce liver stiffness and improve metabolic
+          parameters in patients with Non-Alcoholic Fatty Liver Disease or Non-Alcoholic
+          Steatohepatitis.</li>
+        <li>Initiating the GLP-1 receptors in the pancreas to produce insulin and the release of
+          glucagon that lowers sugar levels and helps in lipolysis.</li>
+        <li>Regulates gastric emptying so food stays in the stomach longer and you feel
+          satiated. Slower gastric emptying further prevents blood pressure fluctuations after
+          meals.</li>
+      </ul>
+      <p class="pt-2 txt-align-justify">Animal studies have shown that Semaglutide can modulate food preference, reduce food
+        intake, and cause favorable weight loss without impacting the body&#39;s energy levels.
+        Mice administered with semaglutide were recorded to have a reduction in food cravings and
+        a reduction in body weight. During its course of action, the medication worked directly and
+        indirectly on the central c-Fos activation, an important marker of neuronal activity
+        responsible for behavioral and neural responses. It targeted the hindbrain and interacted
+        with the ventricles and secondary areas like the lateral parabrachial nucleus. It even
+        assessed the brainstem, septal nucleus, and hypothalamus without crossing the blood-brain
+        barrier. An overall analysis of semaglutide in lab animals showed that it worked on important areas
+        of the brain to regulate prolactin-releasing hormones regulating stress, body weight, gastric
+        motility and feeding behaviors. It even had moderate impacts on tyrosine hydroxylase
+        involved in the biosynthesis of catecholamines like Dopamine.</p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <div>
+      <h4 class="heading-1">Precaution</h4>
+      <div class="safety pb-2"> 
+        <!-- <h4 class="mb-3">Important Safety Information</h4> -->
+          <h6 class="mb-2" style="font-weight: bold;">Despite its immense potential as a weight-loss agent, you should be cautious while using
+          Ozempic for safety purposes.</h6>
+          <p class="pb-2 txt-align-justify">As discussed earlier, semaglutide binds to glucagon-like peptide receptors to increase
+            insulin production and suppress individuals&#39; glucagon secretion. This process delays gastric
+            emptying, which, though considered a pro for people trying to lose weight, can be
+            concerning for patients scheduled to undergo surgical procedures.
+            Surgical procedures, particularly those on the intensive side, require the patients to follow
+            fasting guidelines before anesthesia. The ASA ( American Society of Anesthesiologists )
+            states that for healthy adults, it is important to fast for at least two hours for clear liquids, six
+            hours for a light meal, and eight hours for fried foods or fatty meals, including meat. In such conditions, 
+            Semaglutide use can result in gastric food retention and lead to intraoperative
+            pulmonary complications despite fasting before surgery.
+            In such conditions, physicians advise specific precautions for Semaglutide users before
+            administering anesthesia for the safety of the patient.</p> 
+      </div>
+
+      <div class="mb-4">
+        <h6><b>Another important concern for Ozempic users is the issues regarding the authenticity of the
+          medication.</b></h6>
+        <p class="pt-2 txt-align-justify"> Health regulators worldwide have been voicing their concerns about counterfeit versions of
+          Ozempic that have been noted in different parts of the world and even come to the attention
+          of WHO. The FDA has reported moderate to severe adverse reactions like nausea, vomiting,
+          diarrhea, abdominal pain, and constipation that can result from spurious Ozempic intake.
+          For safe usage, the FDA recommends purchasing Ozempic only from verified distributors
+          and reviewing the information carefully before purchasing to ensure you get a genuine
+          Semaglutide product.
+          FDA has further advised people procuring Ozempic to ensure that they obtain the
+          medication using a valid prescription through licensed pharmacies and check for signs of
+          counterfeiting or pilfering before using it.</p>
+      </div>
+
+
+      <div class=" box mb-4">
+        <h5 class="mb-3 txt-red"><b>Important Safety Information</b></h5>
+      <ul class="b pb-2">
+        <li>Ozempic use can result in anaphylaxis reactions if you are allergic to its ingredients or the
+          medication. Discuss your allergy history with your healthcare provider before starting the
+          drug to stay safe from any possible allergic reactions resulting from Semaglutide use.</li>
+        <li>In case you develop symptoms like severe rashes, swelling of the tongue, or vision
+          difficulties after its administration, discontinue using it immediately and get urgent medical
+          help.</li>
+        <li>It is also important to remember never to share your Ozempic pen with other people or use
+          the Ozempic pen of another person as it can result in contamination and give you or the
+          other person serious infections.</li>
+        <li>Most importantly, the safety of Ozempic has not been determined in pregnant women.
+            Manufacturers recommend you stop taking Ozempic two months before you get pregnant for
+            the safety of the fetus. If you have Type-2 Diabetes, it would be best to consult the physician
+            regarding an alternative treatment method.</li>
+      </ul>
+      </div>
+
+      <div class="safety-content">
+        <h5><b>What is the most important information I should know about Ozempic®?</b></h5>
+          <p class="txt-align-justify pb-3">Before using Ozempec, we have to understand that you need to be eligible to use the
+            medication for controlling sugar levels or for weight loss.
+            A few previous studies pointed out that Ozempic use may be linked with increased
+            occurrence of thyroid cancer when the administration of the medication showed a
+            proliferation of the tumor cells in the in-lab.</p>
+          <p class="mb-2"><b>The EMA ( European Medicine Agency) recently established that its safety panel did
+          not find any link between Ozempic use and thyroid cancer.</b></p>
+          <p class="txt-align-justify mb-3">But for safety reasons, it would be best to inform your healthcare practitioner about any
+            possible history of thyroid cancer and abide by their advice. Healthcare practitioners even
+            contradict the use of Ozempic in men with Type 2 Multiple Endocrine Neoplasia or with a
+            family history of MTC.
+            Additionally, get urgent medical attention if you observe signs of lump or swelling in your
+            neck or difficulty swallowing while using the drug.</p>
+
+            <h5 class="heading-4">The use of Ozempic is further contraindicated in :</h5>
+            <ul class="c">
+              <li>Pregnant or breastfeeding women</li>
+              <li>In people with Type-1 Diabetes</li>
+              <li>In children with Type-2 Diabetes</li>
+              <li>In patients with Diabetic Ketoacidosis</li>
+            </ul>
+      </div>
+
+          <div>
+
+          </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-grey">
+    <div class="container dosage">
+      <h5 class="heading-1">What is Ozempic’s dosage?</h5>
+      <h5 class="heading-2 txt-red">Form and strengths</h5>
+      <p class="txt-align-justify mb-2">Ozempic is an incretin mimetic that comes in subcutaneous injections in liquid form. The
+        injections come in strengths of</p>
+        <ul class="c">
+          <li>Injection of 2 mg/3 mL (0.68 mg/mL) available in six single use pens delivering 0.25 mg
+            or 0.5 mg per injection.</li>
+          <li>Injection of 4 mg/3 mL (1.34 mg/mL) available in four single use pens delivering 1 mg
+            per injection.</li>
+          <li>Injection of 8 mg/3 mL (2.68mg/mL) available in four single use pens delivering 2 mg
+            per injection.</li>
+        </ul>
+    
+      <div class="mt-3">
+        <h5 class="heading-2 txt-red">Form and Administration</h5>
+        <ul class="c">
+          <li>Physicians usually advise using Ozempic once weekly, with or without meals.</li>
+          <li>In most conditions, the lowest strength of 0.25 mg is advised as the beginning dose
+            for the first four weeks to allow the body to get used to Semaglutide. After four
+            weeks, physicians decide whether to continue or increase the dose, depending on
+            how well you are adapting to it.</li>
+          <li>Studies have shown that 1.7 mg or 2.4 mg of Semaglutide, the active ingredient of
+            Ozempic, for three to six months, resulted in a loss of approximately 6.7 kg after
+            three months and 12.3 kg weight loss after six months, respectively.</li>
+          <li>Research has further shown that discontinuing the medication can cause your weight
+            to plateau and eventually gain back the lost weight.</li>
+          <li>The medication has been known to provide optimum results for weight loss when
+            combined with diet and exercise.</li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="">
+  <div class="container">
+    <h2 class="heading-1">How is Ozempic taken?</h2>
+    
+    <h3 class="heading-2 mt-3 txt-red">Taking Ozempic</h3>
+    <div class="mt-2">
+      <h5 class="heading-4">The list below contains a few tips you should follow :</h5>
+      <ul class="b">
+        <li>To maximize your weight loss with Ozempic, avoid alcohol use and foods rich in
+          sugar, carbs, and fats while using it.</li>
+        <li>Studies have shown that a protein-rich food intake while using Ozempic can help in
+          maintaining muscle mass during the weight-loss journey. At the same time, protein
+          can cause gastrointestinal upset, so it would be best to consult a dietician for a
+          customized diet plan that can suit your needs.</li>
+        <li>Gastrointestinal upset is one of the chief side effects experienced by Ozempic users.
+          To minimize the problem, eat slowly, chew your food, and stay hydrated while using
+          it.</li>
+       
+      </ul>
+    </div>
+
+    <div class="mt-3">
+      <h5 class="mb-2 heading-4">Taking Ozempic with other drugs</h5>
+
+          <ul class="b mb-3">
+            <li>Ozempic can interact with antibiotics like Tetracycline, and if you have to use both
+              medications, keep an interval of at least two hours between their use.</li>
+            <li>Use of Ozempic while on antidepressants can increase the risk of hypoglycemia.
+              Discuss your current medical status with your healthcare provider before starting
+              Ozempic.</li>
+            <li>Ozempic can interact negatively with antifungals like Terbinafine, which can impact
+              its absorption rate and overall efficiency.</li>
+          </ul>
+
+      
+
+      <!-- <div class="box mt-5">
+
+        <h3 class="heading-2">QUESTIONS FOR YOUR DOCTOR</h3>
+        
+        <p class="pb-2" >You may have questions about Ozempic and your treatment plan. It’s important to discuss all your concerns with your doctor.</p>
+        <p class="pb-2"><b>Here are a few tips that might help guide your discussion:</b></p>
+        <ul class="b pb-2">
+          <li>Before your appointment, write down questions like:</li>
+              <ul class="c">
+                  <li>How will Ozempic affect my body, mood, or lifestyle?</li>
+              </ul>
+          <li>Bring someone with you to your appointment if doing so will help you feel more comfortable.</li>
+          <li>If you don’t understand something related to your condition or treatment, ask your doctor to explain it to you.</li>
+          <li>If you’re new to self-injections, ask your doctor to explain the process to you slowly so that you can follow the steps. Until you get the hang of it, don’t be shy about asking your doctor to show you the process again.</li>
+        </ul>
+
+        <p class="pt-2">Remember, your doctor and other healthcare professionals are available to help you. And they want you to get the best care possible. So, don’t be afraid to ask questions or offer feedback on your treatment.</p>
+      </div> -->
+
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-new">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-6 lg-6 col-12">
+        <div class="main-img1">
+          <img  class="" src="{% static 'img/semaglutide.png' %}" alt="">
+        </div>
+      </div>
+
+      <div class="col-md-6 lg-6 col-12">
+       <div class="b1">
+        <div class="popup popup-1">
+          <div class="popup-content">
+            <div class="event-header">
+              <h3>Book Your Doses</h3>
+              <h6 class="txt-red">Don't be shy, say hi!</h6>
+            </div>
+
+
+              <form id="send" method="POST"  action="">  {% csrf_token %}           
+                
+                <div class="form-group">
+                  <input type="text" placeholder="Enter name..." id="name" name="name" required="required">
+                  <label for="name">
+                    <i class="fa fa-user"></i>
+                  </label>
+                </div>
+    
+                <div class="form-group">
+                  <input type="tel" placeholder="Enter phone..." id="phone" name="phone" required="required">
+                  <label for="phone">
+                    <i class="fa fa-phone"></i>
+                  </label>
+                </div>
+    
+                <div class="form-group">
+                  <input type="email" placeholder="Enter mail..." id="mail" name="email" required="required">
+                  <label for="mail">
+                    <i class="fa fa-envelope"></i>
+                  </label>
+                </div>
+    
+                <div class="form-group">
+                  <textarea placeholder="Enter message..." name="message" id="text"></textarea>
+                  <label for="text" class="txt">
+                    <i class="fa fa-commenting"></i>
+                  </label>
+                </div>
+    
+                <button type="submit" class="main-btn-rect" name="text" value="Send"><i class="fa fa-paper-plane"></i>Book</button>
+    
+              </form>
+    
+    
+          </div>
+        </div>
+       </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="testi">
+  <div class="testimonials-wrap">
+		<div class="container">
+	        <div class="heading-section">
+	            <span class="sub-heading">Testimonials</span>
+	            <h2>Happy Clients &amp; Feedbacks</h2>
+	        </div>
+	        <div class="carousel-testimonial owl-carousel">
+	            <div class="item">
+	                <div class="testimonial-box d-flex">
+	                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/82.jpg)">
+	                    </div>
+	                    <div class="text ps-4">
+	                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+	                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	                        <p class="name">- Mark Huff</p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="item">
+	                <div class="testimonial-box d-flex">
+	                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/83.jpg)">
+	                    </div>
+	                    <div class="text ps-4">
+	                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+	                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	                        <p class="name">- Rodel Golez</p>
+	                        <!-- <span class="position">Businessman</span> -->
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="item">
+	                <div class="testimonial-box d-flex">
+	                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/84.jpg)">
+	                    </div>
+	                    <div class="text ps-4">
+	                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+	                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	                        <p class="name">- Ken Bosh</p>
+	                        <!-- <span class="position">Businessman</span> -->
+	                    </div>
+	                </div>
+	            </div>
+	           
+	            <div class="item">
+	                <div class="testimonial-box d-flex">
+	                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/92.jpg)">
+	                    </div>
+	                    <div class="text ps-4">
+	                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+	                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	                        <p class="name">- Mark Huff</p>
+	                        <!-- <span class="position">Businessman</span> -->
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+		</div>
+	</div>
+</section>
+
+
+<a href="javascript:void(0)" class="whatsapp" onclick="window.open('https://api.whatsapp.com/send?phone=+911234569870&amp;text=Hello !', '_blank');"><img src="{% static 'img/whatsapp.png' %}" class="img-fluid" alt="whatsapp"></a>
+<!-- <div class="h2 mt-5"></div> -->
+
+
+{% endblock %}

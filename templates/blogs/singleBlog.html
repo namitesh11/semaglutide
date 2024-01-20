@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="page-title bg-1 email-tem">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block pt-3 text-center">
+            <span class="text-black"><b>News details</b></span>
+            <h1 class="text-capitalize mb-5 text-lg">{{blog.title}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+  
+
+<section class="section blog-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+            <div class="row">
+    <div class="col-lg-12 mb-5 shadow-sm p-3 mb-5 bg-light rounded">
+
+    <div class="single-blog-item">
+        <img src="{{blog.image.url}}" alt="image-here" class="img-fluid">
+
+        <div class="blog-item-content mt-5">
+            <div class="blog-item-meta mb-3">
+                <span class="text-color-2 text-capitalize me-3"><i class="icofont-book-mark me-1"></i> {{blog.category}}</span>
+                <span class="text-muted text-color-2 text-capitalize me-3"><i class="icofont-user-alt-7 me-2"></i>By {{blog.author}}</span>
+                <span class="text-black text-capitalize me-3"><i class="icofont-calendar me-1"></i> {{blog.created_at}}</span>
+            </div> 
+
+            <h2 class="mb-4 text-md"><a>{{blog.title}}</a></h2>
+            <p>{{blog.content | safe }}</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <div class="comment-area mt-4 mb-5">
+        <h4 class="mb-4">Comments........! </h4>
+        <ul class="comment-tree list-unstyled">
+        {% for comment in comments%}
+            <li class="mb-5">
+                <div class="comment-area-box">
+                    
+                    <div class="comment-info">
+                        <h5 class="mb-1"> {{ comment.name}}</h5>
+                        <!-- <span>United Kingdom</span> -->
+                        <span class="date-comm">| {{comment.created_at}}</span>
+                    </div>
+
+                    <div class="comment-content mt-3">
+                        <p>{{comment.message}}</p>
+                    </div>
+
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+    <div class="col-lg-12">
+        <form action="{% url 'submit_comment' blog.id %}" class="comment-form my-5" method="post" id="comment-form">{% csrf_token %}
+            <h4 class="mb-4">Write a comment</h4>
+            
+            <div class="row ">
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="name" id="name" placeholder="Name:" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="email" id="mail" placeholder="Email:" required>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <textarea class="form-control mb-4" name="message" id="comment" cols="30" rows="5" placeholder="Comment" required></textarea>
+                    </div>
+                </div>                     
+            </div>
+
+            <input class="btn btn-main-2 btn-round-full" type="submit" name="submit-contact" id="submit_contact" value="Submit Message">
+            {% include 'includes/alerts.html' %}
+        </form>
+    </div>
+</div>
+        </div>
+
+    <div class="col-lg-4">
+          <div class="sidebar-wrap pl-lg-4 mt-5 mt-lg-0  position-sticky">
+            <!-- <div class="sidebar-widget search   shadow p-3 mb-4 bg-body rounded">
+                  <h5>Search Here</h5>
+                    <form action="#" class="search-form mt-3">
+                      <input type="text" class="form-control" placeholder="search">
+                      <i class="ti-search"></i>
+                    </form>
+            </div> -->
+      
+      
+            <div class="sidebar-widget latest-post  shadow p-3 mb-4 bg-body rounded">
+              <h5>Popular Posts</h5>
+          
+            {% for blog in blogs_data %}
+                  <div class="py-2">
+                    <span class="text-sm text-muted">{{blog.created_at}}</span>
+                      <h6 class="my-2"><a href="{% url 'singleBlog' blog.pk %}">{{blog.title}}</a></h6>
+                  </div>
+            {% endfor %}
+
+            </div>
+      
+            <div class="sidebar-widget category shadow p-3 mb-4 bg-body rounded ">
+              <h5 class="mb-4">Categories</h5>
+          
+              <ul class="list-unstyled">
+
+                {% for cate in blog_category %}
+                    <li class="align-items-center mb-3">
+                    <h6><a href="{{cate.get_url}}">{{cate.category}}</a></h6>
+                    </li>
+                {% endfor %}
+                
+              </ul>
+            </div>
+          </div>
+        </div>   
+  </div>
+ 
+      </div>
+  </section>
+
+
+{% endblock %}
+
+
+
+

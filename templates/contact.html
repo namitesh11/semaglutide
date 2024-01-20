@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="cont">
+    <div class="container">
+        <h1 style="text-align: center; font-size:4rem; font-weight:800; color:#da0812;">CONTACT US</h1>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+        <div class="box1 pt-5">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-12">
+                    <div class="get">
+                        <h3 class="mb-5">GET IN TOUCH</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aut repellat asperiores aspernatur suscipit cupiditate veniam quas quam dignissimos blanditiis voluptatem quibusdam.</p>
+                        
+                        <div class="cont-info mt-5">
+                            <ul>
+                                <li><i class="fa-regular fa-envelope"></i> <span>Contactus@gmail.com</span></li>
+                                <li><i class="fa-solid fa-phone"></i> <span>+62 456987799546</span></li>
+                                <li><i class="fa-solid fa-location-dot px-1"></i> <span>Riverside Building, County Hall, London SE1 7PB, United Kingdom</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="social-menu mt-4">
+                            <ul>
+                                <li><a href="" target="blank"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="" target="blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="" target="blank"><i class="fab fa-whatsapp"></i></a></li>
+                                <li><a href="" target="blank"><i class="fab fa-twitter" ></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-6 col-12">
+                    <div class="say">
+                        <h3 class="mb-5">SAY SOMETHING</h3>
+    
+                        <div class="contact-form">
+                            <form action="" id="contact-form" method="POST">{% csrf_token %}
+                              <h2>Send Message</h2>
+                              {% include 'includes/alerts.html' %}
+                              <div class="input-box">
+                                <input type="text" required="true" name="name">
+                                <span>Full Name</span>
+                              </div>
+                              
+                              <div class="input-box">
+                                <input type="email" required="true" name="email">
+                                <span>Email</span>
+                              </div>
+                              
+                              <div class="input-box">
+                                <textarea required="true" name="message"></textarea>
+                                <span>Type your Message...</span>
+                              </div>
+                              
+                              <div class="input-box">
+                                <input type="submit" value="Send" name="">
+                              </div>
+                            </form>
+                          </div>
+    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        
+    <div class="map mt-5">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30154.333632833965!2d72.80480731990264!3d19.13870439685433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b618b6d891dd%3A0x91f8a857c731d132!2sAndheri%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1698481861214!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>    
+           
+  
+  </section>
+
+
+
+<a href="javascript:void(0)" class="whatsapp" onclick="window.open('https://api.whatsapp.com/send?phone=+911234569870&amp;text=Hello !', '_blank');"><img src="{% static 'img/whatsapp.png' %}" class="img-fluid" alt="whatsapp"></a>
+
+
+{% endblock %}
+
+

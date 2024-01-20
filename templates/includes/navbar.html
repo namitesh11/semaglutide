@@ -1,0 +1,102 @@
+{% load static %}
+
+<header>
+    <div class="header fixed-top page-header p-0">
+      <div class="main-head">
+         <div class="container">
+              <ul>
+                <li><a class="" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Important Safety Information</a></li>
+                     <!-- Modal 2  -->         
+                     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Important Safety Information</h5>
+                            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                          </div>
+                          <div class="modal-body">
+                            <p class="text-center"><b>Safety Information That Is Important
+                              Even if the tip has been changed, don't let anyone else use your Ozempic® pen. An important sickness can be passed from you to someone else or caught from them.</b></p>
+                              <br>
+                              <h5 class="heading-5">What is the most important thing I need to know about Ozempic®?</h5>
+                              <p class="mb-4 txt">Ozempic® could have major side effects, such as Possible thyroid growths, even cancer. If your neck gets lumpy or swollen, you hoarse, have trouble swallowing, or feel short of breath, you should see a doctor. These could be signs of thyroid cancer. In tests on mice, Ozempic® and drugs that work like Ozempic® caused thyroid tumors, some of which were cancerous. People who take Ozempic® may get thyroid lumps or a type of thyroid cancer called medullary thyroid carcinoma (MTC). 
+                                This medicine shouldn't be used if you or anyone in your family has ever had MTC or if you have Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).
+                                If you or anyone in your family has ever had MTC or MEN 2, don't use Ozempic®.
+                                Semaglutide or any of the other ingredients in Ozempic® make you sick. In "What are the possible side effects of Ozempic®?" look at the signs of a dangerous allergic response.
+                                Before taking Ozempic®, you should tell your doctor about any other health problems you may have, such as liver or kidney problems that you have or have had. 
+                                to have had diabetic retinopathy in the past.
+                                are breastfeeding or pregnant, or who want to become pregnant or breastfeeding. Ozempic® might hurt your pregnant child or get into your breast milk, but no one knows for sure. Two months before you want to get pregnant, you should stop taking Ozempic®.
+                                Tell your doctor about all the prescription and over-the-counter drugs, vitamins, plant supplements, and diabetes medicines like insulin or sulfonylureas that you take.
+                              </p>
+                  
+                              <h5 class="heading-5">What are some things that could go wrong with Ozempic®?</h5>
+                              <p class="mb-4 txt">Ozempic® could have major side effects, such as Pancreatitis is swelling of the pancreas. If you are taking Ozempic® and have serious stomach pain that won't go away, with or without puking, you should stop taking it right away and call your doctor. The pain could be in your back or in your stomach.
+                                  changes in how you see. You should let your doctor know if your vision changes while you are taking Ozempic®.
+                                  Hypoglycemia means low blood sugar. Ozempic® may make you more likely to get low blood sugar if you take it with another drug that can do that, like insulin or a sulfonylurea. Low blood sugar can cause feeling dizzy or lightheaded, having trouble seeing, being anxious, irritable, or having mood swings, sweating, slurred speech, hunger, feeling confused or sleepy, shakiness, weakness, headaches, a fast heartbeat, and jitteriness.
+                                  issues with the kidneys (kidney failure). People with kidney problems may lose fluids (dehydrate) when they have diarrhea, feel sick, or throw up. This can make their kidney problems worse. To keep from getting dehydrated, you should drink several cups of water every day.
+                                  bad allergic response. If you experience any of the following signs of a dangerous allergic reaction: face, lips, tongue, or throat swelling; trouble breathing or swallowing; extreme rash or itching; passing out or feeling dizzy; or a very fast heartbeat, you should stop using Ozempic® right away and see a doctor.
+                                  issues with the gut. Some people who take Ozempic® have had trouble with their gallbladder. Should you experience any of these signs, you should call your doctor right away: pain in the upper belly, fever, jaundice (yellowing of the skin or eyes), or stools that are clay-colored.
+                                  Ozempic® can cause side effects like feeling sick, throwing up, diarrhea, gut pain, and not being able to go to the bathroom.</p>
+                          
+                                <h5 class="heading-5">How do I get Ozempic®?</h5>
+                                <p class="mb-4 txt"><b>The 0.5 mg, 1 mg, or 2 mg Ozempic® (semaglutide) shot is a prescription medicine that is used to</b>
+                                    along with food and exercise to help adults with type 2 diabetes lower their blood sugar (glucose).
+                                    to lower the chance of major heart events like heart attack, stroke, or death in adults with type 2 diabetes who already have heart disease.
+                                    Ozempic® may not be safe for people who have had pancreatitis.
+                                    People with type 1 diabetes should not take Ozempic®.
+                                    Ozempic® may not be safe or helpful for kids younger than 18 years old.
+                                    For more information on how to prescribe and take Ozempic®, please click here.
+                                    Ozempic® can only be bought with a prescription.
+                                </p><br>
+                                <p class="txt-span text-center"> People who qualified can get help from Novo Nordisk with their treatments. To find out more about Novo Nordisk's help programs, please call 1-866-310-7549.</p><br>
+                                <p class="txt-span"> You should tell the FDA about any bad effects that you get from medicinal drugs. You can call 1-800-FDA-1088 or go to www.fda.gov/medwatch.</p>
+                            </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                <li class="two"><a href="{% static 'doct/ozempic-guide.pdf' %}" target="_blank">Prescribing Information</a></li>
+                <li><a href="{% static 'doct/ozempic-guide.pdf' %}" target="_blank">Medication Guide</a></li>
+              </ul>     
+        </div>
+        <hr>
+      </div>
+
+        <nav class="navbar  navbar-expand-lg menu">
+          <div class="container">
+                  <a class="navbar-brand" href="{% url 'home' %}"><img class="logo" src="{% static 'img/ozempic_logo.png' %}" alt="" width="220px" ></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                          
+                        <li class="nav-item ">
+                            <a class="nav-link" aria-current="page" href="{% url 'home' %}"> Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page"  href="{% url 'howtotake' %}">How to Take Ozempic®</a>
+                        </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{% url 'faq' %}">FAQs</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{% url 'blogs' %}">Blogs</a>
+                          </li>
+                      </ul>
+
+                  </div>                     
+                  <div class="buy-btn">
+                    <a href="{% url 'contact' %}" class="btn btn-primary"><b>Contact Us</b></a>
+                  </div>
+
+                 
+            </div>  
+        </nav>
+    </div>
+  </header>

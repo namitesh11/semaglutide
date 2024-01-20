@@ -1,0 +1,277 @@
+{% load static %} 
+<footer class="mt-100">
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+  
+          <div class="col-lg-5 col-md-5 col-12">
+            <div class="f1">
+              <div class="f-logo"><img src="{% static 'img/ozempic_logo.png' %}" alt="" width="180px"></div>
+              
+              <div class="social mt-3">                
+                  <span><a><i class="fa-brands fa-square-facebook"></i></a></span>
+                  <span><a><i class="fa-brands fa-square-twitter"></i></a></span>
+                  <span><a><i class="fa-brands fa-square-instagram"></i></a></span>               
+              </div>
+              
+              <p class="mt-2 f-info" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aut repellat asperiores aspernatur suscipit cupiditate veniam quas quam dignissimos blanditiis voluptatem quibusdam.</p>
+           
+                <div>
+                  <p class="f-5"><i class="fa-solid fa-location-dot"></i>&nbsp;<b class="addr"> ADDRESS:</b> BLK 744 PASIR RIS Street 71, #13-01,510744 SIG</p>
+                </div>
+  
+                <div>
+                  <p class="f-5"><i class="fa-solid fa-phone"></i>&nbsp;<b class="addr"> PHONE:</b><a href="tel:1000000000">+62 236 5698 5698/+62 968 5698 6589</a> </p>
+                </div>
+  
+                <div class="">
+                  <p class="f-5"><i class="fa-solid fa-envelope"></i>&nbsp;<b class="addr"> MAIL:</b> sales@semaglutide.com</p>
+                </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-7 col-md-7 col-12">
+  
+            <div class="row">
+  
+              <div class="col-md-12 col-lg-12 col-12">
+                <div class="mt-5">
+                </div>
+              </div>
+  
+              <div class="col-md-6 col-lg-6 col-12">
+                <div class="row">
+
+                  <div class="col-lg-12 col-12 col-md-12">
+                    <div class="f3">
+                      <h5>Our Product</h5>
+                      <ul class="imp mt-3 p-0">
+                        <li><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Ozempic Semaglutide Injection</a></li>
+                            <!-- Modal -->
+                                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">SEMAGLUTIDE INJECTION</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <div class="popup">
+
+                                            <div class="popup-content">
+                                              <div class="event-header">
+                                                {% include 'includes/alerts.html' %}
+                                                <h3>Book Your Doses</h3>
+                                                <h6>Don't be shy, say hi!</h6>
+                                              </div>
+                                                <form id="send" class="send-form" action="" method="post"> {% csrf_token %}
+                                      
+                                                  <div class="form-group">
+                                                    <input type="text" placeholder="Enter name..."  name="name" required="required">
+                                                    <label for="name">
+                                                      <i class="fa fa-user"></i>
+                                                    </label>
+                                                  </div>
+                                      
+                                                  <div class="form-group">
+                                                    <input type="tel" placeholder="Enter phone..."  name="phone" required="required">
+                                                    <label for="phone">
+                                                      <i class="fa fa-phone"></i>
+                                                    </label>
+                                                  </div>
+                                      
+                                                  <div class="form-group">
+                                                    <input type="email" placeholder="Enter mail..."  name="email" required="required">
+                                                    <label for="mail">
+                                                      <i class="fa fa-envelope"></i>
+                                                    </label>
+                                                  </div>
+                                      
+                                                  <div class="form-group">
+                                                    <textarea placeholder="Enter message..." name="message" ></textarea>
+                                                    <label for="text" class="txt">
+                                                      <i class="fa fa-commenting"></i>
+                                                    </label>
+                                                  </div>               
+                                                  <button type="submit"  class="main-btn-rect" name="text" value="Send">
+                                                    <i class="fa fa-paper-plane"></i>Send</button>                
+                                                </form>                                                 
+                                            </div>                
+                                          </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+
+                        <!-- <li><a href="#">Ozempic Semaglutide Tablets</a></li> -->
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12 col-12 col-md-12">
+                    <div class="mt-2">
+                      <h5 style="color: #81c3d7 !important;">Useful Links</h5>
+                      <ul class="imp mt-3 p-0">
+                        <li><a href="{% url 'blogs' %}">Blog</a></li>
+                        <li><a class="" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Important Safety Information</a></li>
+                            <!-- Modal 2  -->         
+                            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                              <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalToggleLabel">Important Safety Information</h5>
+                                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                                  </div>
+                                  <div class="modal-body">
+                                    <p class="text-center"><b>Safety Information That Is Important
+                                      Even if the tip has been changed, don't let anyone else use your Ozempic® pen. An important sickness can be passed from you to someone else or caught from them.</b></p>
+                                      <br>
+                                      <h5 class="heading-5">What is the most important thing I need to know about Ozempic®?</h5>
+                                      <p class="mb-4 txt">Ozempic® could have major side effects, such as Possible thyroid growths, even cancer. If your neck gets lumpy or swollen, you hoarse, have trouble swallowing, or feel short of breath, you should see a doctor. These could be signs of thyroid cancer. In tests on mice, Ozempic® and drugs that work like Ozempic® caused thyroid tumors, some of which were cancerous. People who take Ozempic® may get thyroid lumps or a type of thyroid cancer called medullary thyroid carcinoma (MTC). 
+                                        This medicine shouldn't be used if you or anyone in your family has ever had MTC or if you have Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).
+                                        If you or anyone in your family has ever had MTC or MEN 2, don't use Ozempic®.
+                                        Semaglutide or any of the other ingredients in Ozempic® make you sick. In "What are the possible side effects of Ozempic®?" look at the signs of a dangerous allergic response.
+                                        Before taking Ozempic®, you should tell your doctor about any other health problems you may have, such as liver or kidney problems that you have or have had. 
+                                        to have had diabetic retinopathy in the past.
+                                        are breastfeeding or pregnant, or who want to become pregnant or breastfeeding. Ozempic® might hurt your pregnant child or get into your breast milk, but no one knows for sure. Two months before you want to get pregnant, you should stop taking Ozempic®.
+                                        Tell your doctor about all the prescription and over-the-counter drugs, vitamins, plant supplements, and diabetes medicines like insulin or sulfonylureas that you take.
+                                      </p>
+                          
+                                      <h5 class="heading-5">What are some things that could go wrong with Ozempic®?</h5>
+                                      <p class="mb-4 txt">Ozempic® could have major side effects, such as Pancreatitis is swelling of the pancreas. If you are taking Ozempic® and have serious stomach pain that won't go away, with or without puking, you should stop taking it right away and call your doctor. The pain could be in your back or in your stomach.
+                                          changes in how you see. You should let your doctor know if your vision changes while you are taking Ozempic®.
+                                          Hypoglycemia means low blood sugar. Ozempic® may make you more likely to get low blood sugar if you take it with another drug that can do that, like insulin or a sulfonylurea. Low blood sugar can cause feeling dizzy or lightheaded, having trouble seeing, being anxious, irritable, or having mood swings, sweating, slurred speech, hunger, feeling confused or sleepy, shakiness, weakness, headaches, a fast heartbeat, and jitteriness.
+                                          issues with the kidneys (kidney failure). People with kidney problems may lose fluids (dehydrate) when they have diarrhea, feel sick, or throw up. This can make their kidney problems worse. To keep from getting dehydrated, you should drink several cups of water every day.
+                                          bad allergic response. If you experience any of the following signs of a dangerous allergic reaction: face, lips, tongue, or throat swelling; trouble breathing or swallowing; extreme rash or itching; passing out or feeling dizzy; or a very fast heartbeat, you should stop using Ozempic® right away and see a doctor.
+                                          issues with the gut. Some people who take Ozempic® have had trouble with their gallbladder. Should you experience any of these signs, you should call your doctor right away: pain in the upper belly, fever, jaundice (yellowing of the skin or eyes), or stools that are clay-colored.
+                                          Ozempic® can cause side effects like feeling sick, throwing up, diarrhea, gut pain, and not being able to go to the bathroom.</p>
+                                  
+                                        <h5 class="heading-5">How do I get Ozempic®?</h5>
+                                        <p class="mb-4 txt"><b>The 0.5 mg, 1 mg, or 2 mg Ozempic® (semaglutide) shot is a prescription medicine that is used to</b>
+                                            along with food and exercise to help adults with type 2 diabetes lower their blood sugar (glucose).
+                                            to lower the chance of major heart events like heart attack, stroke, or death in adults with type 2 diabetes who already have heart disease.
+                                            Ozempic® may not be safe for people who have had pancreatitis.
+                                            People with type 1 diabetes should not take Ozempic®.
+                                            Ozempic® may not be safe or helpful for kids younger than 18 years old.
+                                            For more information on how to prescribe and take Ozempic®, please click here.
+                                            Ozempic® can only be bought with a prescription.
+                                        </p><br>
+                                        <p class="txt-span text-center"> People who qualified can get help from Novo Nordisk with their treatments. To find out more about Novo Nordisk's help programs, please call 1-866-310-7549.</p><br>
+                                        <p class="txt-span"> You should tell the FDA about any bad effects that you get from medicinal drugs. You can call 1-800-FDA-1088 or go to www.fda.gov/medwatch.</p>
+                                    </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        <li class="two"><a href="{% static 'doct/ozempic-guide.pdf' %}" target="_blank">Prescribing Information</a></li>
+                        <li><a href="{% static 'doct/ozempic-guide.pdf' %}" target="_blank">Medication Guide</a></li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+    
+              <!-- <div class="col-md-4 col-lg-4 col-12">
+                <div class="f3">
+                  <h5 class="">Useful Links</h5>
+                    <ul class="imp mt-3 p-0">
+                      <li><a href="#">About Us</a></li>
+                      
+                    </ul>
+                </div>
+              </div> -->
+    
+              <div class="col-md-6 col-lg-6 col-12">
+                <div class="f3">
+                  <h5 class="">Important Links</h5>
+                    <ul class="imp mt-3 p-0">
+                      <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                      <!-- <li><a href="#">About Us</a></li> -->
+                      <li><a href="#">Privacy Policy's</a></li>
+                      <li><a href="#">Shipping policy</a></li>
+                      <li><a href="#">Refund Policy</a></li>
+                      <li><a href="#">Terms And Condition</a></li>                     
+                    </ul>
+                </div>
+              </div>
+  
+              <div class="col-md-12 col-lg-12 col-12">
+                <div class="d mt-5">
+                  <hr style="color:#ffffff; z-index:1">
+                  <p class="mt-2" style="text-align: center; font-weight:bold; font-size:12px; color:#ffffff; padding-bottom: 10px;"><small>Copyright © SEMAGLUTIDE 2023  All Rights Reserved</small></p>
+                </div>
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+          <!-- <script>
+            const header = document.querySelector(".page-header");
+              const toggleClass = "is-sticky";
+  
+              window.addEventListener("scroll", () => {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > 150) {
+                  header.classList.add(toggleClass);
+                } else {
+                  header.classList.remove(toggleClass);
+                }
+              });
+          </script> -->
+  
+         <!--
+           <script>
+              var slider = document.getElementById("myRange");
+              var output = document.getElementById("demo");
+              output.innerHTML = slider.value;
+              
+              slider.oninput = function() {
+                output.innerHTML = this.value;
+              }
+          </script>
+         -->
+  
+          <script>
+              setTimeout(function(){
+                $('#message').fadeOut('slow')
+              },2000)
+
+
+            $(function() {
+                //----- OPEN
+                $('[data-popup-open]').on('click', function(e)  {
+                    var targeted_popup_class = jQuery(this).attr('data-popup-open');
+                    $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+             
+                    e.preventDefault();
+                });
+             
+                //----- CLOSE
+                $('[data-popup-close]').on('click', function(e)  {
+                    var targeted_popup_class = jQuery(this).attr('data-popup-close');
+                    $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+             
+                    e.preventDefault();
+                });
+            });
+            </script>
+         
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          <script src="{% static 'js/script.js' %}"></script>
